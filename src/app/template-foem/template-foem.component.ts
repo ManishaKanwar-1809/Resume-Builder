@@ -1,0 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-template-foem',
+  templateUrl: './template-foem.component.html',
+  styleUrls: ['./template-foem.component.css']
+})
+export class TemplateFoemComponent implements OnInit {
+public personalDetailsFormGroup: FormGroup;
+  constructor() { 
+    this.personalDetailsFormGroup = new FormGroup({
+      firstName: new FormControl("", [Validators.required]),
+      middleName: new FormControl(""),
+      lastName: new FormControl("", [Validators.required]),
+      mobileNo: new FormControl("", [Validators.required]),
+      email: new FormControl("", [Validators.required, Validators.email]),
+      linkedIn: new FormControl(""),
+      github:  new FormControl(""),
+      objective:  new FormControl(""),
+
+    })
+  }
+  
+  ngOnInit(): void {
+alert("hello...")  }
+
+public savePersonalDetails(event: any) {
+  debugger
+  for(const eachValue in this.personalDetailsFormGroup.value) {
+this.personalDetailsFormGroup.value.eachValue = (this.personalDetailsFormGroup.value.eachValue).trim();
+  }
+  console.log(this.personalDetailsFormGroup.value.eachValue)
+}
+
+}

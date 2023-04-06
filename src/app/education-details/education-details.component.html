@@ -1,0 +1,253 @@
+<div class="overflow-auto bg-light">
+    <!-- <h1>PERSONAL </h1> -->
+    <form [formGroup]="educationDetailsFormGroup">
+        <div class="card card-body">
+            
+            <div class="panel panel-default">
+                <div class="container">
+                    <div class="panel-heading">High School</div>
+                    <div class="panel-body" [formGroup]="highSchoolFormGroup">
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">School Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="schoolName" type="text" placeholder="School Name">
+                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+    
+    
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Duration</label>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="fromDate" type="text">
+                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div> 
+                            <div class="col-lg-2" style="text-align:center">
+                                    - to -                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="toDate" type="text">
+                            
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+    
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Percentage</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="percentage" type="text">
+                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+    
+    
+    
+    
+    
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="panel-heading">Higher Secondary School</div>
+                    <div class="panel-body" [formGroup]="higherSecondaryFormGroup">
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">School Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="schoolName" type="text" placeholder="School Name">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Duration</label>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="fromDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-2" style="text-align:center">
+                                - to -
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="toDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Percentage</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="percentage" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                
+                
+                
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="panel-heading">Graduation</div>
+                    <div class="panel-body" [formGroup]="graduationFormGroup">
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">College Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="collegeName" type="text" placeholder="College Name">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Course Title</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="courseTitle" type="text" placeholder="Course Title">
+                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Duration</label>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="fromDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-2" style="text-align:center">
+                                - to -
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="toDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Percentage</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="percentage" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                
+                
+                
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="panel-heading">Post Graduation</div>
+                    <div class="panel-body" [formGroup]="postGraduationFormGroup">
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">College Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="collegeName" type="text" placeholder="College Name">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Course Title</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="courseTitle" type="text" placeholder="Course Title">
+                        
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Duration</label>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="fromDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-2" style="text-align:center">
+                                - to -
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                            <div class="col-lg-4">
+                                <input class="form-control" formControlName="toDate" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                        <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-lg-2 col-form-label">Percentage</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" formControlName="percentage" type="text">
+                
+                                <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                            </div>
+                        </div>
+                
+                
+                
+                
+                
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+                  <div class="form-group row mb-3 mt-2">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
+                    <button type="submit" class="submit-btn btn btn-primary" (click)="savePersonalDetails($event)">Submit</button>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>

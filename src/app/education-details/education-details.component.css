@@ -1,0 +1,47 @@
+div.overflow-auto {
+    max-width: 100%;
+    max-height: 100vh;
+    top: 100rem;
+}
+
+form {
+    /* position: absolute; */
+    width: 100%;
+    top: 4.50rem;
+    z-index: 1;
+    position: relative;
+    /* padding-left: 255px; */
+    /* left: 0rem; */
+    padding-left: 300px;
+    padding-right: 50px;
+    /* width: calc(100%); */
+    height: calc(100vh - 3.6rem);
+    /* box-shadow: 0px 0px 10px rgba(133, 131, 131, 0.5); */
+    background-color: whitesmoke
+}
+
+form>button {
+    text-align: center;
+}
+div .container {
+    border: 1px solid black;
+    border-radius: 1px solid grey;
+    margin-top:10px;
+}
+/* div .container .panel-heading {
+ width: 140vh;
+} */
+div.container:hover {
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}div.panel-heading{
+    text-align: center;
+    background-color: darkgray;
+    vertical-align: middle;
+    min-height: 2rem;
+}
+div.panel-body {
+     margin-top:5px
+}
+.submit-btn {
+    align-items: center;
+}

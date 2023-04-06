@@ -1,0 +1,14 @@
+/* nav {
+    height: 100%;
+} */
+.side-bar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.side-bar-button:hover {
+    background-color: rgb(127, 129, 131);
+    border-radius: 30%;
+}

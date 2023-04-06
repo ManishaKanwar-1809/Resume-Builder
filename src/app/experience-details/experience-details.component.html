@@ -1,0 +1,70 @@
+<div class="overflow-auto bg-light">
+    <!-- <h1>PERSONAL </h1> -->
+    <form [formGroup]="experienceFormGroup">
+        <div class="card card-body">
+            <div class="form-group row mb-3">
+                <label for="staticEmail" class="col-lg-2 col-form-label">company Name</label>
+                <div class="col-lg-10">
+                    <input class="form-control" formControlName="companyName" type="text" placeholder="First Name">
+
+                    <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="inputPassword" class="col-lg-2 col-form-label">Job Title</label>
+                <div class="col-lg-10">
+                    <input class="form-control" formControlName="jobTitle" type="text" placeholder="Job Title">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="staticEmail" class="col-lg-2 col-form-label">Designation</label>
+                <div class="col-lg-10">
+                    <input class="form-control" formControlName="designation" type="text" placeholder="Designation">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="staticEmail" class="col-lg-2 col-form-label">Duration</label>
+                <div class="col-lg-4">
+                    <input class="form-control" formControlName="fromDate" type="text">
+            
+                    <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                </div>
+                <div class="col-lg-2" style="text-align:center">
+                    - to -
+                    <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" formControlName="toDate" type="text">
+            
+                    <!-- <input type="text" class="form-control placeholder="Enter email"> -->
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-3">
+                <label for="responsibilitiesAndAchievements" class="col-lg-2 col-form-label">Responsibilities And Achievements</label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="4" formControlName="responsibilitiesAndAchievements" placeholder="Write something about your Achievements and your responsibilities in your company..."></textarea>
+                </div>
+            </div>
+
+           
+            <div class="form-group row mb-3">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
+                    <button type="submit" class="btn btn-primary" (click)="savePersonalDetails($event)">Submit</button>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>

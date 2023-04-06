@@ -1,0 +1,10 @@
+<div class="side-nav-content">
+    <ul class="nav-list">
+        <li class="nav-list-item" *ngFor="let eachItem of list">
+            <i class="{{eachItem.icon}}" style="color:whitesmoke"></i>
+            <span>
+                <a routerLink="{{eachItem.path}}">{{eachItem.name}}</a>
+            </span>
+        </li>
+    </ul>
+</div>
