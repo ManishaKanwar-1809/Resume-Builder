@@ -29,9 +29,9 @@ toDate: new FormControl("")
   const projectFormArray = this.projectDetailsFormGroup.get("projects") as FormArray;
 projectFormArray.push(this.projectsFormGroup())
   }
-  
+
   ngOnInit(): void {
-alert("hello...")  }
+  }
 
 public savePersonalDetails(event: any) {
   debugger

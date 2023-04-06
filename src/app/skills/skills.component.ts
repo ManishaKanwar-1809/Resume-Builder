@@ -30,7 +30,7 @@ toDate: new FormControl("")
 skillFormArray.push(this.skillsFG())
   }
   ngOnInit(): void {
-alert("hello...")  }
+  }
 
 public savePersonalDetails(event: any) {
   debugger

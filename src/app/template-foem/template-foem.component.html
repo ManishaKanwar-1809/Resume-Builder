@@ -1,68 +1,22 @@
 <div class="overflow-auto bg-light">
     <!-- <h1>PERSONAL </h1> -->
-    <form [formGroup]="personalDetailsFormGroup">
+    <!-- <form [formGroup]="personalDetailsFormGroup"> -->
         <div class="card card-body">
-            <div class="form-group row mb-3">
-                <label for="staticEmail" class="col-lg-2 col-form-label">First Name</label>
-                <div class="col-lg-10">
-                    <input class="form-control" formControlName="firstName" type="text" placeholder="First Name">
-
-                    <!-- <input type="text" class="form-control placeholder="Enter email"> -->
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label for="inputPassword" class="col-lg-2 col-form-label">Middle Name</label>
-                <div class="col-lg-10">
-                    <input class="form-control" formControlName="middleName" type="text" placeholder="Middle Name">
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label for="staticEmail" class="col-lg-2 col-form-label">Last Name</label>
-                <div class="col-lg-10">
-                    <input class="form-control" formControlName="lastName" type="text" placeholder="Last Name">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label for="inputPassword" class="col-lg-2 col-form-label">Mobile No</label>
-                <div class="col-lg-10">
-                    <input type="number" class="form-control" formControlName="mobileNo" placeholder="Moblie No">
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label for="staticEmail" class="col-lg-2 col-form-label">Email</label>
-                <div class="col-lg-10">
-                    <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
-                        placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label for="inputPassword" class="col-lg-2 col-form-label">Linked-In Id</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control" formControlName="linkedIn" placeholder="linkedIn">
-                </div>
-            </div>
-
-            <div class="form-group row mb-3">
-                <label for="inputPassword" class="col-lg-2 col-form-label">Git Hub Id</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control" formControlName="github" placeholder="Password">
-                </div>
+           
+            <div class="card" *ngFor="let eachTemplate of templates;let i=index">
+<img src="{{eachTemplate.image}}" alt="Reload Again">
             </div>
             <div class="form-group row mb-3">
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-4">
-                    <button type="submit" class="btn btn-primary" (click)="savePersonalDetails($event)">Submit</button>
+                    <button type="submit" class="btn btn-dark" (click)="savePersonalDetails($event)">Submit</button>
                 </div>
                 <div class="col-lg-4">
                 </div>
             </div>
 
         </div>
-    </form>
+    <!-- </form> -->
 
 </div>

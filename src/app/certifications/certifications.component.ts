@@ -30,7 +30,7 @@ toDate: new FormControl("")
 certificationFormArray.push(this.certificatesFormGroup())
   }
   ngOnInit(): void {
-alert("hello...")  }
+  }
 
 public savePersonalDetails(event: any) {
   debugger

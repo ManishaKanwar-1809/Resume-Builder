@@ -7,30 +7,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./template-foem.component.css']
 })
 export class TemplateFoemComponent implements OnInit {
-public personalDetailsFormGroup: FormGroup;
+public templates: any[];
   constructor() { 
-    this.personalDetailsFormGroup = new FormGroup({
-      firstName: new FormControl("", [Validators.required]),
-      middleName: new FormControl(""),
-      lastName: new FormControl("", [Validators.required]),
-      mobileNo: new FormControl("", [Validators.required]),
-      email: new FormControl("", [Validators.required, Validators.email]),
-      linkedIn: new FormControl(""),
-      github:  new FormControl(""),
-      objective:  new FormControl(""),
-
-    })
+    this.templates = [
+      {id:1, image:"src/public/templates/resume_template1.png"},
+      {id:1, image:"src/public/templates/resume_template2.png"},
+      {id:1, image:"src/public/templates/resume_template3.png"},
+      {id:1, image:"src/public/templates/resume_template4.png"},
+      {id:1, image:"src/public/templates/resume_template5.png"},
+    ]
+   
   }
   
   ngOnInit(): void {
-alert("hello...")  }
+  }
 
 public savePersonalDetails(event: any) {
-  debugger
-  for(const eachValue in this.personalDetailsFormGroup.value) {
-this.personalDetailsFormGroup.value.eachValue = (this.personalDetailsFormGroup.value.eachValue).trim();
-  }
-  console.log(this.personalDetailsFormGroup.value.eachValue)
+//   debugger
+//   for(const eachValue in this.personalDetailsFormGroup.value) {
+// this.personalDetailsFormGroup.value.eachValue = (this.personalDetailsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.personalDetailsFormGroup.value.eachValue)
 }
 
 }

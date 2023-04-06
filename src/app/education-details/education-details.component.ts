@@ -72,7 +72,7 @@ public educationDetailsFormGroup: FormGroup;
   //     })
   // }
   ngOnInit(): void {
-alert("hello...")  }
+  }
 
 public savePersonalDetails(event: any) {
   debugger
