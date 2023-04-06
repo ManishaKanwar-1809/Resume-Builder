@@ -1,5 +1,14 @@
 # ResumeBuilderApp
 
+#Output
+![Screenshot from 2023-04-06 18-29-27](https://user-images.githubusercontent.com/66915421/230386192-841d08b9-8be7-480c-9a09-83323019ca41.png)
+![Screenshot from 2023-04-06 18-32-02](https://user-images.githubusercontent.com/66915421/230386817-bf148d13-2974-4483-9036-046ca54cbccb.png)
+![Screenshot from 2023-04-06 18-33-44](https://user-images.githubusercontent.com/66915421/230387077-6c20002d-fd01-4680-966f-5c0100158921.png)
+![Screenshot from 2023-04-06 18-34-53](https://user-images.githubusercontent.com/66915421/230387336-c5694d7b-a425-47b6-9666-b49f3fb8f2ac.png)
+![Screenshot from 2023-04-06 18-36-17](https://user-images.githubusercontent.com/66915421/230387947-25b4d67f-15a5-4818-9e73-f3603ece83fb.png)
+![Screenshot from 2023-04-06 18-38-52](https://user-images.githubusercontent.com/66915421/230388267-9cea37db-51f8-4682-96f6-3e4d39bde820.png)
+![projects](https://user-images.githubusercontent.com/66915421/230388866-01a14915-db8e-4cd5-9e91-a75b7d714afe.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
