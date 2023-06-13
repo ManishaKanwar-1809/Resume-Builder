@@ -8,6 +8,7 @@
 ![Screenshot from 2023-06-13 12-46-01](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/5781a3c6-cb2b-46f8-856d-cdfb61e28c85)
 ![Screenshot from 2023-06-13 12-46-36](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/a3001b8a-2d3d-4a56-89de-2910fea06fc7)
 ![Screenshot from 2023-06-13 12-47-03](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/f6aeb24b-431a-4373-b808-e5e7c01e004e)
+![Screenshot from 2023-06-13 13-04-54](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/c37c9fb3-54aa-479f-b013-166901db3468)
 
 
 
