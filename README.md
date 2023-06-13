@@ -1,4 +1,11 @@
 # ResumeBuilderApp
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+
+Resume Builder is a Web Application which is used to build Resume Directly, users just need to save some forms so that we can save their data into mongoDB and then generate a Resume on the basis of saved data.
+# Frontend-  Angular , Typescript , Bootstrap.
+# Backend- Node JS, Typescript , Express , mongoose.
+# Database: NoSQL, MongoDB.
+# API-  REST API
 
 #Output
 ![Screenshot from 2023-06-13 12-44-08](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/160a66b7-de55-49d2-832d-ea40635b343c)
@@ -10,9 +17,6 @@
 ![Screenshot from 2023-06-13 12-47-03](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/f6aeb24b-431a-4373-b808-e5e7c01e004e)
 ![Screenshot from 2023-06-13 13-04-54](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/c37c9fb3-54aa-479f-b013-166901db3468)
 
-
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
 
