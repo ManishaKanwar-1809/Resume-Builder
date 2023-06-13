@@ -1,4 +1,4 @@
-# ResumeBuilderApp - ## (Using MEAN STACK)
+# ResumeBuilderApp - Using MEAN STACK
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 Resume Builder is a Web Application which is used to build Resume Directly, users just need to save some forms so that we can save their data into mongoDB and then generate a Resume on the basis of saved data.
