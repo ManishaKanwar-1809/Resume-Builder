@@ -1,5 +1,16 @@
 # ResumeBuilderApp
 
+#Output
+![Screenshot from 2023-06-13 12-44-08](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/160a66b7-de55-49d2-832d-ea40635b343c)
+![Screenshot from 2023-06-13 12-44-43](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/94bce17f-51cd-4b84-a307-e63306dcbcf4)
+![Screenshot from 2023-06-13 12-45-00](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/9955e174-1df3-454f-bcc5-8d4f766a506d)
+![Screenshot from 2023-06-13 12-45-21](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/097a9876-33c9-41ea-9e45-30f8e6ef8fd4)
+![Screenshot from 2023-06-13 12-46-01](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/5781a3c6-cb2b-46f8-856d-cdfb61e28c85)
+![Screenshot from 2023-06-13 12-46-36](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/a3001b8a-2d3d-4a56-89de-2910fea06fc7)
+![Screenshot from 2023-06-13 12-47-03](https://github.com/ManishaKanwar-1809/Resume-Builder/assets/66915421/f6aeb24b-431a-4373-b808-e5e7c01e004e)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
