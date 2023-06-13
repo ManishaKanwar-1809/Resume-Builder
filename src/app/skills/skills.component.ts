@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { SkillsService } from '../services/skills/skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,7 +9,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SkillsComponent implements OnInit {
 public skillsFormGroup: FormGroup;
-  constructor() { 
+  constructor(private skillsServices: SkillsService) { 
     this.skillsFormGroup = new FormGroup({
       skillsArray: new FormArray([]),
        })
@@ -32,11 +33,23 @@ skillFormArray.push(this.skillsFG())
   ngOnInit(): void {
   }
 
-public savePersonalDetails(event: any) {
+public saveSkills(event: any) {
   debugger
-  for(const eachValue in this.skillsFormGroup.value) {
-this.skillsFormGroup.value.eachValue = (this.skillsFormGroup.value.eachValue).trim();
+  if(this.skillsFormGroup.valid) {
+    const data = this.skillsFormGroup.getRawValue();
+this.skillsServices.saveSkillsDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
+
   }
-  console.log(this.skillsFormGroup.value.eachValue)
+)
+  }
+//   for(const eachValue in this.skillsFormGroup.value) {
+// this.skillsFormGroup.value.eachValue = (this.skillsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.skillsFormGroup.value.eachValue)
 }
 }

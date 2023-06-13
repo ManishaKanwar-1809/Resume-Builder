@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProjectsService } from '../services/projects/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +9,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ProjectsComponent implements OnInit {
 public projectDetailsFormGroup: FormGroup;
-  constructor() { 
+  constructor(private projectDetailServices: ProjectsService) { 
     this.projectDetailsFormGroup = new FormGroup({
       projects: new FormArray([]),
        })
@@ -33,11 +34,23 @@ projectFormArray.push(this.projectsFormGroup())
   ngOnInit(): void {
   }
 
-public savePersonalDetails(event: any) {
+public saveProjectDetails(event: any) {
   debugger
-  for(const eachValue in this.projectDetailsFormGroup.value) {
-this.projectDetailsFormGroup.value.eachValue = (this.projectDetailsFormGroup.value.eachValue).trim();
+  if(this.projectDetailsFormGroup.valid) {
+    const data = this.projectDetailsFormGroup.getRawValue();
+this.projectDetailServices.saveProjectsDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
+
   }
-  console.log(this.projectDetailsFormGroup.value.eachValue)
+)
+  }
+//   for(const eachValue in this.projectDetailsFormGroup.value) {
+// this.projectDetailsFormGroup.value.eachValue = (this.projectDetailsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.projectDetailsFormGroup.value.eachValue)
 }
 }

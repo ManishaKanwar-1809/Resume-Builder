@@ -3,7 +3,7 @@
 <form [formGroup]="personalDetailsFormGroup">
     <div class="card card-body">        
         <div class="form-group row mb-3">
-            <label for="staticEmail" class="col-lg-2 col-form-label">First Name</label>
+            <label for="firstName" class="col-lg-2 col-form-label">First Name</label>
             <div class="col-lg-10">
                 <input class="form-control" formControlName="firstName"  type="text" placeholder="First Name">
 
@@ -51,14 +51,12 @@
                 <input type="text" class="form-control" formControlName="github" placeholder="Password">
             </div>
         </div>
-        <div class="form-group row mb-3">
+        <div class="form-group row mb-3  m-auto p-auto mt-3">
+           
             <div class="col-lg-4">
-</div>
-            <div class="col-lg-4">
-                <button type="submit" class="btn btn-success" (click)="savePersonalDetails($event)">Submit</button>
+                <button type="submit" class="btn btn-success" (click)="savePersonalDetails($event)">Save</button>
             </div>
-            <div class="col-lg-4">
-</div>
+            
         </div>
 
     </div>

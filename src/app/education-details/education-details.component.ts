@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { EducationService } from '../services/education/education.service';
 
 @Component({
   selector: 'app-education-details',
@@ -8,7 +9,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class EducationDetailsComponent implements OnInit {
 public educationDetailsFormGroup: FormGroup;
-  constructor() { 
+  constructor( private educationDetailServices: EducationService) { 
     this.educationDetailsFormGroup = new FormGroup({
       highSchool: new FormGroup({
         schoolName: new FormControl("", [Validators.required]),
@@ -74,12 +75,23 @@ public educationDetailsFormGroup: FormGroup;
   ngOnInit(): void {
   }
 
-public savePersonalDetails(event: any) {
+public saveEducationDetails(event: any) {
   debugger
-  for(const eachValue in this.educationDetailsFormGroup.value) {
-this.educationDetailsFormGroup.value.eachValue = (this.educationDetailsFormGroup.value.eachValue).trim();
-  }
-  console.log(this.educationDetailsFormGroup.value.eachValue)
-}
+  if(this.educationDetailsFormGroup.valid) {
+    const data = this.educationDetailsFormGroup.getRawValue();
+this.educationDetailServices.saveEducationDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
 
+  }
+)
+  }
+//   for(const eachValue in this.educationDetailsFormGroup.value) {
+// this.educationDetailsFormGroup.value.eachValue = (this.educationDetailsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.educationDetailsFormGroup.value.eachValue)
+}
 }

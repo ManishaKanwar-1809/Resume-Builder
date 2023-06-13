@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PersonalDetailsService } from '../services/personal-details/personal-details.service';
 
 @Component({
   selector: 'app-personal-details-form',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class PersonalDetailsFormComponent implements OnInit {
 public personalDetailsFormGroup: FormGroup;
-  constructor() { 
+  constructor(private personalDetailServices: PersonalDetailsService) { 
     this.personalDetailsFormGroup = new FormGroup({
       firstName: new FormControl("", [Validators.required]),
       middleName: new FormControl(""),
@@ -27,10 +28,21 @@ public personalDetailsFormGroup: FormGroup;
 
 public savePersonalDetails(event: any) {
   debugger
-  for(const eachValue in this.personalDetailsFormGroup.value) {
-this.personalDetailsFormGroup.value.eachValue = (this.personalDetailsFormGroup.value.eachValue).trim();
-  }
-  console.log(this.personalDetailsFormGroup.value.eachValue)
-}
+  if(this.personalDetailsFormGroup.valid) {
+    const data = this.personalDetailsFormGroup.getRawValue();
+this.personalDetailServices.savePersonalDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
 
+  }
+)
+  }
+//   for(const eachValue in this.personalDetailsFormGroup.value) {
+// this.personalDetailsFormGroup.value.eachValue = (this.personalDetailsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.personalDetailsFormGroup.value.eachValue)
+}
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CertificatesService } from '../services/certificates/certificates.service';
 
 @Component({
   selector: 'app-certifications',
@@ -8,7 +9,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class CertificationsComponent implements OnInit {
 public certificationDetailsFormGroup: FormGroup;
-  constructor() { 
+  constructor(private certificationDetailServices: CertificatesService) { 
     this.certificationDetailsFormGroup = new FormGroup({
       certificates: new FormArray([]),
        })
@@ -26,17 +27,37 @@ toDate: new FormControl("")
   }
 
   public addCertifications() {
+    debugger
   const certificationFormArray = this.certificationDetailsFormGroup.get("certificates") as FormArray;
 certificationFormArray.push(this.certificatesFormGroup())
   }
   ngOnInit(): void {
   }
 
-public savePersonalDetails(event: any) {
-  debugger
-  for(const eachValue in this.certificationDetailsFormGroup.value) {
-this.certificationDetailsFormGroup.value.eachValue = (this.certificationDetailsFormGroup.value.eachValue).trim();
+  public handleCertificateName(event: any, index: number){
+    console.log(event.target.value);
+    this.certificationDetailsFormGroup.get("certificates")?.get(index.toString())?.patchValue({
+     nameOfCertification: event.target.value 
+    })
+    
   }
-  console.log(this.certificationDetailsFormGroup.value.eachValue)
+public saveCertificationDetails(event: any) {
+  debugger
+  if(this.certificationDetailsFormGroup.valid) {
+    const data = this.certificationDetailsFormGroup.getRawValue();
+this.certificationDetailServices.saveCertificationDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
+
+  }
+)
+  }
+//   for(const eachValue in this.certificationDetailsFormGroup.value) {
+// this.certificationDetailsFormGroup.value.eachValue = (this.certificationDetailsFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.certificationDetailsFormGroup.value.eachValue)
 }
 }

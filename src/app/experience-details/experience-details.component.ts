@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ExperiencesService } from '../services/experiences/experiences.service';
 
 @Component({
   selector: 'app-experience-details',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ExperienceDetailsComponent implements OnInit {
 public experienceFormGroup: FormGroup;
-  constructor() { 
+  constructor( private experienceDetailServices: ExperiencesService) { 
     this.experienceFormGroup = new FormGroup({
       companyName: new FormControl(""),
       jobTitle: new FormControl(""),
@@ -23,11 +24,23 @@ public experienceFormGroup: FormGroup;
   ngOnInit(): void {
   }
 
-public savePersonalDetails(event: any) {
+public saveExperienceDetails(event: any) {
   debugger
-  for(const eachValue in this.experienceFormGroup.value) {
-this.experienceFormGroup.value.eachValue = (this.experienceFormGroup.value.eachValue).trim();
+  if(this.experienceFormGroup.valid) {
+    const data = this.experienceFormGroup.getRawValue();
+this.experienceDetailServices.saveExperienceDetails(data).subscribe(
+  (data: any) => {
+      alert("Data Saved Successfully");
+  }, 
+  (error: any) => {
+      alert("Something went wrong");
+
   }
-  console.log(this.experienceFormGroup.value.eachValue)
+)
+  }
+//   for(const eachValue in this.experienceFormGroup.value) {
+// this.experienceFormGroup.value.eachValue = (this.experienceFormGroup.value.eachValue).trim();
+//   }
+//   console.log(this.experienceFormGroup.value.eachValue)
 }
 }

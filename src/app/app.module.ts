@@ -1,4 +1,5 @@
 import { Component, NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -14,7 +15,6 @@ import { CertificationsComponent } from './certifications/certifications.compone
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TemplateFoemComponent } from './template-foem/template-foem.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +26,10 @@ import { TemplateFoemComponent } from './template-foem/template-foem.component';
     CertificationsComponent,
     SkillsComponent,
     ProjectsComponent,
-    TemplateFoemComponent,
+    TemplateFoemComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
